@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Models
+namespace api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class todoList : ControllerBase
+    public class TodoController : ControllerBase
     {
         
     }
