@@ -7,6 +7,14 @@ namespace api.Models
 {
     public class TodoItem
     {
+        public int Id { get; set; }
+
+        public string TaskOne { get; set; }
+
+        public string TaskTwo { get; set; }
+
+        public string TaskThree { get; set; }
+
         
     }
 }
