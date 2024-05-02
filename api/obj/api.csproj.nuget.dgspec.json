@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {}
+    "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {
+    "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
+        "projectUniqueName": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
+        "projectPath": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
         "packagesPath": "C:\\Users\\Alicia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\obj\\",
+        "outputPath": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alicia\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
