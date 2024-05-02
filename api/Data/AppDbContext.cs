@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace api.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext 
     {
         
     }

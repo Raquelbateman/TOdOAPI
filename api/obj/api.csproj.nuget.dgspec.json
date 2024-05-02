@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {}
+    "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {
+    "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
+        "projectPath": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\api.csproj",
         "packagesPath": "C:\\Users\\Alicia\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\obj\\",
+        "outputPath": "C:\\Users\\Alicia\\Academy\\Level 3\\TOdOAPI\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alicia\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -52,6 +52,8 @@
               "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
             },
