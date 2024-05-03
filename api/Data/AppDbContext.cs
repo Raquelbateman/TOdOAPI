@@ -13,7 +13,7 @@ namespace api.Data;
    {
     
 
-    
    }
+   public DbSet<TodoItem> TodoItems { get; set; }
 
 }
