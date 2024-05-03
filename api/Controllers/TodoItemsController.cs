@@ -8,7 +8,7 @@ namespace api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TodoController : ControllerBase
+    public class TodoItemsController : ControllerBase
     {
         
     }
