@@ -10,6 +10,11 @@ namespace api.Controllers
     [Route("api/[controller]")]
     public class TodoItemsController : ControllerBase
     {
-        
+        [HttpGet]
+        public string SayHi(){
+             return "Hi from me";
     }
+        }
+
+       
 }
