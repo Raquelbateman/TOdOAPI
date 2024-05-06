@@ -28,6 +28,27 @@ namespace api.Controllers
             var todoitems = await _context.TodoItems.AsNoTracking().ToListAsync();
             return todoitems;
         }
+        [HttpPost]
+
+        public async Task<IActionResult> Create(TodoItem todo)
+        {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            await _context.AddAsync(todo);
+
+            var result = await _context.SaveChangesAsync();
+
+            if (result > 0)
+            {
+                return Ok();
+            }
+
+            return BadRequest();
+        }
+
+
 
         }
 
