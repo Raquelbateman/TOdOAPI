@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.Data;
 using Microsoft.AspNetCore.Mvc;
+using SQLitePCL;
 
 namespace api.Controllers
 {
@@ -10,10 +12,15 @@ namespace api.Controllers
     [Route("[controller]")]
     public class TodoItemsController : ControllerBase
     {
-        [HttpGet]
-        public string SayHi(){
-             return "Hi from me";
-    }
+
+        private readonly AppDbContext _context;
+      public TodoItemsController(AppDbContext context)
+      {
+        _context = context;
+
+      }
+        
+
         }
 
        
