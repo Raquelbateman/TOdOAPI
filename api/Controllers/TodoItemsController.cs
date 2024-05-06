@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api.Data;
+using api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 
 namespace api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class TodoItemsController : ControllerBase
     {
 
@@ -19,7 +21,13 @@ namespace api.Controllers
         _context = context;
 
       }
-        
+        [HttpGet]
+
+        public async Task<IEnumerable<TodoItem>> getToDo()
+        {
+            var todoitems = await _context.TodoItems.AsNoTracking().ToListAsync();
+            return todoitems;
+        }
 
         }
 
