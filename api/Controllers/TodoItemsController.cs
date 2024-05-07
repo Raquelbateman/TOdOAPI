@@ -23,7 +23,7 @@ namespace api.Controllers
       }
         [HttpGet]
 
-        public async Task<IEnumerable<TodoItem>> getToDo()
+        public async Task<IEnumerable<TodoItem>> getToDoItem()
         {
             var todoitems = await _context.TodoItems.AsNoTracking().ToListAsync();
             return todoitems;
@@ -47,9 +47,6 @@ namespace api.Controllers
 
             return BadRequest();
         }
-
-        
-
 
 
         }
