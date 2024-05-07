@@ -1,6 +1,6 @@
 # Mini Challenge 3 Todo API .NET 8 (CRUD)
 
-<b>Name:</b>           <br>
+<b>Name: Alicia Bryant</b>           <br>
 <b>Project:</b> Mini Challenge - 3 Todo API .NET 8 (CRUD) <br>
 <b>Date:</b> 05/06/2024 <br>
 <strong>Description:</strong>

@@ -96,12 +96,12 @@ namespace api.Controllers
           
             if(toDoItemFromDb == null)
             {
-                return BadRequest($"toDoItem {id} was not found.");
+                return BadRequest($"Item {id} was not found.");
             }
-            // if the item at the id requested is found
+           
             toDoItemFromDb.TaskOne = toDoItems.TaskOne;
             toDoItemFromDb.TaskTwo = toDoItems.TaskTwo;
-            toDoItemFromDb.TaskThree = toDoItems.TaskThree;
+            toDoItemFromDb.Done = toDoItems.Done;
 
         
             var result = await _context.SaveChangesAsync();
@@ -112,7 +112,7 @@ namespace api.Controllers
                 return Ok($"toDoItem update {id} was updated");
             }
 
-            // if the result was not saved properly
+            
             return BadRequest($"Unable to update toDoItem {id} info");
 
         }
