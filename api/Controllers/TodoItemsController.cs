@@ -48,6 +48,31 @@ namespace api.Controllers
             return BadRequest();
         }
 
+ [HttpDelete("{id:int}")]
+        // this http request will delete a todo item
+        public async Task<IActionResult> Delete(int id)
+        {
+            // make variable to hold the data from our AppDBContext 
+            var todo = await _context.TodoItems.FindAsync(id);
+            // Check if empty and give notfound
+            if(todo == null)
+            {
+                return NotFound();
+            }
+            // remove the item toDoItem based on id from parameter
+            _context.Remove(todo);
+            // save the result of the changes
+            var result = await _context.SaveChangesAsync();
+            // if the result ocurred give okay response
+            if (result > 0)
+            {
+                return Ok("Item was deleted");
+            }
+            // if result > 0 failed return badrequest & custom response
+            return BadRequest("Unable to delete todo item");
+
+
+        }
 
         }
 
