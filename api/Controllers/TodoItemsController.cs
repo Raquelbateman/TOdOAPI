@@ -76,16 +76,16 @@ namespace api.Controllers
 
         }
 
-//          [HttpGet("{id:int}")]
-//         public async Task<ActionResult<TodoItem>> GetToDoItems(int id)
-//         {
-//             var toDoItem = await _context.TodoItems.FindAsync(id);
-//             if (toDoItem == null)
-//             {
-//                 return NotFound($"Sorry, toDoItem {id} was not found...");
-//             }
-//             return Ok(toDoItem);
-//         }
+         [HttpGet("{id:int}")]
+        public async Task<ActionResult<TodoItem>> GetToDoItems(int id)
+        {
+            var toDoItem = await _context.TodoItems.FindAsync(id);
+            if (toDoItem == null)
+            {
+                return NotFound($"Sorry, item {id} was not found...");
+            }
+            return Ok(toDoItem);
+        }
 
 //         [HttpPut("{id:int}")]
 
