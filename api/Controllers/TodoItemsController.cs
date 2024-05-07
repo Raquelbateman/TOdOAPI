@@ -87,35 +87,35 @@ namespace api.Controllers
             return Ok(toDoItem);
         }
 
-//         [HttpPut("{id:int}")]
+        [HttpPut("{id:int}")]
 
-//         public async Task<IActionResult> EditToDoItem(int id, TodoItem toDoItems)
-//         {
+        public async Task<IActionResult> EditToDoItem(int id, TodoItem toDoItems)
+        {
           
-//             var toDoItemFromDb = await _context.TodoItems.FindAsync(id);
+            var toDoItemFromDb = await _context.TodoItems.FindAsync(id);
           
-//             if(toDoItemFromDb == null)
-//             {
-//                 return BadRequest($"toDoItem {id} was not found.");
-//             }
-//             // if the item at the id requested is found
-//             toDoItemFromDb.TaskOne = toDoItems.TaskOne;
-//             toDoItemFromDb.TaskTwo = toDoItems.TaskTwo;
-//             toDoItemFromDb.TaskThree = toDoItems.TaskThree;
+            if(toDoItemFromDb == null)
+            {
+                return BadRequest($"toDoItem {id} was not found.");
+            }
+            // if the item at the id requested is found
+            toDoItemFromDb.TaskOne = toDoItems.TaskOne;
+            toDoItemFromDb.TaskTwo = toDoItems.TaskTwo;
+            toDoItemFromDb.TaskThree = toDoItems.TaskThree;
 
         
-//             var result = await _context.SaveChangesAsync();
+            var result = await _context.SaveChangesAsync();
 
          
-//             if(result > 0)
-//             {
-//                 return Ok($"toDoItem update {id} was updated");
-//             }
+            if(result > 0)
+            {
+                return Ok($"toDoItem update {id} was updated");
+            }
 
-//             // if the result was not saved properly
-//             return BadRequest($"Unable to update toDoItem {id} info");
+            // if the result was not saved properly
+            return BadRequest($"Unable to update toDoItem {id} info");
 
-//         }
+        }
 
         }
 
