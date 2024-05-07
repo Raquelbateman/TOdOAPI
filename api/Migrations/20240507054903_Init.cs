@@ -18,7 +18,7 @@ namespace api.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     TaskOne = table.Column<string>(type: "TEXT", nullable: true),
                     TaskTwo = table.Column<string>(type: "TEXT", nullable: true),
-                    TaskThree = table.Column<string>(type: "TEXT", nullable: true)
+                    Done = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

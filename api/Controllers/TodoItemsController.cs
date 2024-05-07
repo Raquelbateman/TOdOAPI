@@ -23,7 +23,7 @@ namespace api.Controllers
       }
         [HttpGet]
 
-        public async Task<IEnumerable<TodoItem>> getToDoItem()
+        public async Task<IEnumerable<TodoItem>> GetToDoItem()
         {
             var todoitems = await _context.TodoItems.AsNoTracking().ToListAsync();
             return todoitems;
@@ -54,69 +54,68 @@ namespace api.Controllers
         // this http request will delete a todo item
         public async Task<IActionResult> Delete(int id)
         {
-            // make variable to hold the data from our AppDBContext 
+        
             var todo = await _context.TodoItems.FindAsync(id);
-            // Check if empty and give notfound
+           
             if(todo == null)
             {
                 return NotFound();
             }
-            // remove the item toDoItem based on id from parameter
+           
             _context.Remove(todo);
-            // save the result of the changes
+           
             var result = await _context.SaveChangesAsync();
-            // if the result ocurred give okay response
+        
             if (result > 0)
             {
                 return Ok("Item was deleted");
             }
-            // if result > 0 failed return badrequest & custom response
-            return BadRequest("Unable to remove todo item");
+         
+            return BadRequest("Unable to remove item");
 
 
         }
 
-         [HttpGet("{id:int}")]
-        public async Task<ActionResult<TodoItem>> GetToDoItems(int id)
-        {
-            var toDoItem = await _context.TodoItems.FindAsync(id);
-            if (toDoItem == null)
-            {
-                return NotFound($"Sorry, toDoItem {id} was not found...");
-            }
-            return Ok(toDoItem);
-        }
+//          [HttpGet("{id:int}")]
+//         public async Task<ActionResult<TodoItem>> GetToDoItems(int id)
+//         {
+//             var toDoItem = await _context.TodoItems.FindAsync(id);
+//             if (toDoItem == null)
+//             {
+//                 return NotFound($"Sorry, toDoItem {id} was not found...");
+//             }
+//             return Ok(toDoItem);
+//         }
 
-                // still need PUT or update request
-        // [HttpPut("{id:int}")]
+//         [HttpPut("{id:int}")]
 
-        // public async Task<IActionResult> EditToDoItem(int id, ToDoItem toDoItems)
-        // {
-        //     //this will hold the data from our _context data after finding the item by id
-        //     var toDoItemFromDb = await _context.ToDoItems.FindAsync(id);
-        //     // now lets update but first check if the item by id is empty
-        //     if(toDoItemFromDb == null)
-        //     {
-        //         return BadRequest($"toDoItem {id} was not found.");
-        //     }
-        //     // if the item at the id requested is found
-        //     toDoItemFromDb.TaskName = toDoItems.TaskName;
-        //     toDoItemFromDb.TaskDescription = toDoItems.TaskDescription;
-        //     toDoItemFromDb.Done = toDoItems.Done;
+//         public async Task<IActionResult> EditToDoItem(int id, TodoItem toDoItems)
+//         {
+          
+//             var toDoItemFromDb = await _context.TodoItems.FindAsync(id);
+          
+//             if(toDoItemFromDb == null)
+//             {
+//                 return BadRequest($"toDoItem {id} was not found.");
+//             }
+//             // if the item at the id requested is found
+//             toDoItemFromDb.TaskOne = toDoItems.TaskOne;
+//             toDoItemFromDb.TaskTwo = toDoItems.TaskTwo;
+//             toDoItemFromDb.TaskThree = toDoItems.TaskThree;
 
-        //     // now lets save these changes to result
-        //     var result = await _context.SaveChangesAsync();
+        
+//             var result = await _context.SaveChangesAsync();
 
-        //     // lets check to see if the todoitems were updated
-        //     if(result > 0)
-        //     {
-        //         return Ok($"toDoItem update {id} was updated");
-        //     }
+         
+//             if(result > 0)
+//             {
+//                 return Ok($"toDoItem update {id} was updated");
+//             }
 
-        //     // if the result was not saved properly
-        //     return BadRequest($"Unable to update toDoItem {id} info");
+//             // if the result was not saved properly
+//             return BadRequest($"Unable to update toDoItem {id} info");
 
-        // }
+//         }
 
         }
 

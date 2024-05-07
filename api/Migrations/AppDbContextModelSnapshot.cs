@@ -22,10 +22,10 @@ namespace api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("TaskOne")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("Done")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("TaskThree")
+                    b.Property<string>("TaskOne")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TaskTwo")

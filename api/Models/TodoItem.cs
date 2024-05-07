@@ -13,7 +13,7 @@ namespace api.Models
 
         public string? TaskTwo { get; set; }
 
-        public string? TaskThree { get; set; }
+        public string? TaskThree {get; set;}
 
 
 

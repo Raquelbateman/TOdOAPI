@@ -10,7 +10,7 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240507050150_Init")]
+    [Migration("20240507054903_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -25,10 +25,10 @@ namespace api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("TaskOne")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("Done")
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("TaskThree")
+                    b.Property<string>("TaskOne")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TaskTwo")
